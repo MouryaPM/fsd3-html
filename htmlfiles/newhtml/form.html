@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FORM</title>
+  </head>
+  <body>
+    <!-- form :
+            action 
+        -->
+
+    <form action="/submit-data">
+      <label>Username *</label>
+      <input type="text" placeholder="Enter name" name="userName" required />
+      <label>Email</label>
+      <input type="email" name="useremail" />
+      <br />
+      <label> <input type="radio" name="gender" value="male" />Male </label>
+
+      <label> <input type="radio" name="gender" value="female" />Female</label>
+      <br />
+      <button type="submit">Submit Form</button>
+      <!-- <input type="number" />
+      <input type="color" />
+      <input type="date" />
+      <input type="month" />
+      <input type="file" />
+      <input type="email" />
+      <input type="password" /> -->
+    </form>
+  </body>
+</html>
+<!-- http://127.0.0.1:5500/submit-data?
+    http://127.0.0.1:5500/submit-data?userName=pooja
+
+http://127.0.0.1:5500 - localhost
+/submit-data - action
+?  - data 
+
+http://127.0.0.1:5500/submit-data
+http://127.0.0.1:5500/submit-data?userName=pooja
+
+
+?username=pooja    = username -> pooja
+
+regex : .org , .tech. .com , .ed .hotmail
+-->
