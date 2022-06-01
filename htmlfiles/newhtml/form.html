@@ -10,26 +10,148 @@
 
     <form action="/submit-data">
       <label>Username *</label>
-      <input type="text" placeholder="Enter name" name="userName" required />
+      <input
+        type="text"
+        placeholder="Enter name"
+        name="userName"
+        required
+        maxlength="5"
+      />
       <label>Email</label>
-      <input type="email" name="useremail" />
+      <input type="email" name="userName" autofocus />
       <br />
-      <label> <input type="radio" name="gender" value="male" />Male </label>
+      <label for="male">Male</label>
+      <input type="radio" name="gender" value="male" id="male" />
+      <!-- <label> <input type="radio" name="gender" value="male" />Male </label> -->
 
-      <label> <input type="radio" name="gender" value="female" />Female</label>
+      <!-- <label> <input type="radio" name="gender" value="female" />Female</label> -->
+      <label for="female">Female</label>
+      <input type="radio" name="gender" value="female" id="female" checked />
+      <br />
+      <label for="reminder">Reminder</label>
+      <input type="checkbox" id="reminder" name="reminder" />
+      <label for="game">Sports</label>
+
+      <input type="checkbox" name="reminder" id="game" />
+      <br />
+      <input type="file" accept=".jpg" />
+      <!-- cols:   rows: -->
+      <label for="review">Review</label>
+      <textarea rows="4" cols="50" id="review" name="review" maxlength="50">
+Tuesday, 31 May 2022,</textarea
+      >
+      <br />
+      <br />
+      <br />
+
+      <!-- select / select box / dropdown
+      array = multiple data
+      loop - visit each data from array and show in html
+      required
+      disabled
+      autofocus
+      chips
+
+      multiple
+      -->
+
+      <select name="colors" size="3" multiple>
+        <option value="">--Select color--</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="pink">Pink</option>
+        <option value="gray">Gray</option>
+        <option value="aqua">Aqua</option>
+        <option value="brown">Brown</option>
+      </select>
+      <br />
+      <br />
       <br />
       <button type="submit">Submit Form</button>
+
       <!-- <input type="number" />
       <input type="color" />
       <input type="date" />
       <input type="month" />
-      <input type="file" />
+      
       <input type="email" />
       <input type="password" /> -->
     </form>
+    <h1>Tables</h1>
+    <!-- 
+      table
+      tr - table row
+      td - table data
+      th - table heading
+      thead - table head
+      tbody - table body
+      tfoot - table footer
+     -->
+    <table border="2">
+      <caption>
+        Table name
+      </caption>
+      <thead>
+        <tr>
+          <th>Heading</th>
+          <th>Name</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Users</th>
+          <td>Pooja</td>
+          <td>Mourya</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <th>New User</th>
+          <td>Neha</td>
+          <td>Mourya</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td colspan="4">Total users:3</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Data</th>
+          <td rowspan="2">Valid users</td>
+          <td>Pooja</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Neha</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Welcome user</td>
+        </tr>
+      </tfoot>
+    </table>
   </body>
 </html>
-<!-- http://127.0.0.1:5500/submit-data?
+<!--
+created_at: date time
+modified_at : date time
+
+  http://127.0.0.1:5500/submit-data?userName=pooja&userName=a%40b.com&gender=female&review=++++++
+
+
+
+http://127.0.0.1:5500/submit-data?userName=p&useremail=&gender=female&reminder=on&reminder=on&review=++++++
+http://127.0.0.1:5500/submit-data?
+pooja&pooja%40mail.com&female&review=++++++
+
+
+  userName=pooja
+  http://127.0.0.1:5500/submit-data?&useremail=p%40mail.com&gender=male
+  http://127.0.0.1:5500/submit-data?userName=pooja&gender=abc
+  
+  http://127.0.0.1:5500/submit-data?
     http://127.0.0.1:5500/submit-data?userName=pooja
 
 http://127.0.0.1:5500 - localhost
